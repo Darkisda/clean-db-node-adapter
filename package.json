@@ -1,0 +1,22 @@
+{
+  "name": "clean-db-adapter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/pg": "^8.11.6",
+    "clean-db-adapter": "file:",
+    "mysql2": "^3.11.0",
+    "pg": "^8.12.0",
+    "tsx": "^4.17.0"
+  }
+}

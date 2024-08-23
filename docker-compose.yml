@@ -1,0 +1,30 @@
+services:
+  db-pg:
+    image: postgres:14
+    ports:
+      - "5601:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=db
+    volumes:
+      - ./.docker/pgdata:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - dev
+  db-mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./.docker/mysql:/var/lib/mysql
+    restart: always
+    networks:
+      - dev
+
+networks:
+  dev:
