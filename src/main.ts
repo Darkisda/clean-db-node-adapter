@@ -10,7 +10,6 @@ async function main() {
     const userRepository: UserRepository = new UserRepositoryImp(dbAdapter);
     const useCase = new FindAllUsers(userRepository);
     const response = await useCase.exec();
-    await dbAdapter.close();
     console.log(response);
 }
 
